@@ -1,6 +1,9 @@
-
-go shopping
 go to the dentist
 go to the gym
 groseries
 go to my friends house
+clean the house
+shopping
+ shopping
+groseries
+clean the house
