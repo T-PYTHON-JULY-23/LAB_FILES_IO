@@ -5,7 +5,7 @@ while True:
  if answer == 'y':
   toDo_item = input("type in your new To-Do item: ")
   file = open("to_do.txt", "a+", encoding="utf-8")
-  file.write(toDo_item+"\n")
+  file.write(toDo_item+'\n')
   file.close()
 
  elif answer == 'n':
