@@ -24,6 +24,7 @@ while user_input!="exit":
             content=file.read()
             print(content)
     user_input=input("do you want to add a new To-Do item? ".title()).lower()
+file.close()
     
 
         
