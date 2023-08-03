@@ -35,3 +35,4 @@ while True:
     else:
         print("Invalid input. Please enter 'y', 'n', or 'exit'.")
 print("Thank you for using the To-Do program, come back again soon!")
+f.close()
