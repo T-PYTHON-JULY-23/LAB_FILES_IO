@@ -1,4 +1,1 @@
-read aboo
-read a book
-exit
-n
+
