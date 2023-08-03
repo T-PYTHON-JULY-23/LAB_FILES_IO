@@ -12,13 +12,15 @@ def text_do_it():
         file = open("to_do.txt", "a+", encoding="utf-8")
         file.write(f"{input_user_y}\n\n")
         file.close()
-
+        text_do_it()
     elif ask_user == 'n':
         ask_user_for_list_item =input('do you want to list your To-Do items ? answer "y" for yes and "n" for no. : ')
         if ask_user_for_list_item == 'y':
             file = file = open("to_do.txt", "r", encoding="utf-8")
             content = file.read()
             print(content)
+            print()
+            text_do_it()
         elif ask_user_for_list_item == 'n':
             write_again = input("Do want to write again ? answer y for yes and exit for exit from program : ")
             if write_again == 'y':
