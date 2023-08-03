@@ -6,10 +6,6 @@
 #     If the user answers yes for reading his To-Do list , then print a list of the To-Do items one item per line.
 #     Then return again to ther first question and ask again, you coninue this untill the user types in "exit" , then you exit the program. and print to the user "thank you for using the To-Do program, come back again soon"
 
-
-
-
-
 import os
 
 while True:
