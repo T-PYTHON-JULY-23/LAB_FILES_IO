@@ -5,12 +5,24 @@ If the user answers no, then ask the user : do you want to list your To-Do items
 If the user answers yes for reading his To-Do list , then print a list of the To-Do items one item per line.
 Then return again to ther first question and ask again, you coninue this untill the user types in "exit" , then you exit the program. and print to the user "thank you for using the To-Do program, come back again soon"
 '''
+from time import gmtime, strftime
+
+date = strftime("%Y-%m-%d %H:%M:%S", gmtime())
+
+
+    
+
+
+
 def text_do_it():
     ask_user = input('do you want to add a new To-Do item? answer by "y" for yes and "n" for no. : ')
     if ask_user == 'y':
         input_user_y =input("Please Enter what to want do it ?")
+        done="Not Done"
+        # ------ Using json -------
+        json_dict = {"title":input_user_y,"date":date,"done":done}
         file = open("to_do.txt", "a+", encoding="utf-8")
-        file.write(f"{input_user_y}\n\n")
+        file.write(f"{input_user_y} - {date} - Done \n\n")
         file.close()
         text_do_it()
     elif ask_user == 'n':
