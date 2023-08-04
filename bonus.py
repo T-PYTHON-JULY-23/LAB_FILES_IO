@@ -1,6 +1,9 @@
 import json
 import datetime
 
+def save_todos(todos):
+    with open("to_do.json", "w") as f:
+        json.dump(todos, f)
 
 def display_todos(todos):
     print("Your To-Do List:")
@@ -8,13 +11,11 @@ def display_todos(todos):
         done = 'DONE' if todo['done'] else 'NOT DONE'
         print(f"{i + 1}- {todo['title']} - {todo['date']} - {done}")
 
-
 def modify_todos(todos, operation):
     if operation == 'mark done':
         print("Enter the number of the task you want to mark as Done:")
     elif operation == 'search':
         print("Enter the title of the task you want to search for:")
-
     choice = input()
     if operation == 'mark done':
         try:
@@ -35,12 +36,6 @@ def modify_todos(todos, operation):
         if not found:
             print("No matching tasks found.")
 
-
-def save_todos(todos):
-    with open("to_do.json", "w") as f:
-        json.dump(todos, f)
-
-
 def load_todos():
     try:
         with open("to_do.json") as f:
@@ -48,7 +43,6 @@ def load_todos():
     except FileNotFoundError:
         todos = []
     return todos
-
 
 def main():
     todos = load_todos()
@@ -75,7 +69,6 @@ def main():
         else:
             print("Invalid input. Please enter 'y', 'n', or 'exit'.")
     print("Thank you for using the To-Do program, come back again soon!")
-
 
 if __name__ == "__main__":
     main()
