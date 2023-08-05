@@ -1,4 +1,3 @@
-
 while True:
   file = open("to_do.txt", "a+", encoding="utf-8")
   your_items = input("do you want to add a new To-Do item? by 'y' for 'yes' and 'n' for 'no'")
